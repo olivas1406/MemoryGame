@@ -1,0 +1,12 @@
+
+.footer {
+    background-color: rgb(11, 11, 94);
+    text-align: left;
+    color: white;
+    height: 40px;
+}
+
+.image {
+    margin-left: 1%;
+    width: 20px;
+}
