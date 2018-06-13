@@ -5,18 +5,40 @@ import Cards from "./components/Cards";
 import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
 
+
+
+import friends from "./friends.json";
+
+
+
+
 class App extends Component {
+
+  state = {
+    friends
+  };
+
+  removeFriend = id => {
+      const friends = this.state.friends.filter(friend => friend.id !== id);
+    this.setState({ friends });
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Wrapper>
+        <Title>Clickey Game</Title>
+        {this.state.friends.map(friend => (
+          <Cards
+            removeFriend={this.removeFriend}
+            id={friend.id}
+            key={friend.id}
+            name={friend.name}
+            image={friend.image}
+            occupation={friend.occupation}
+            location={friend.location}
+          />
+        ))}
+      </Wrapper>
     );
   }
 }
