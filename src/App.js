@@ -7,6 +7,7 @@ import Container from "./components/Container";
 import Footer from "./components/Footer";
 import './App.css';
 
+
 import friends from "./friends.json";
 
 
