@@ -8,7 +8,13 @@
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: left;
   }
-  
+
+.card:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1); 
+}
+
   .card > .img-container {
     height: 100%;
     overflow: hidden;
