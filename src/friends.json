@@ -2,61 +2,61 @@
   {
     "id": 1,
     "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/b/bb/Azura_Skyrim.png/revision/latest?cb=20120123005856",
-    "name": "name 1"
+    "name": "Azura"
   },
   {
     "id": 2,
     "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/1/14/Boethiah%27s_Shrine.png/revision/latest?cb=20130625190733",
-    "name": "name 2"
+    "name": "Boethiah"
   },
   {
     "id": 3,
     "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/9/96/Clavicus_Vile_Statue.jpg/revision/latest?cb=20111117231746",
-    "name": "name 3"
+    "name": "Clavicus Vile"
   },
   {
     "id": 4,
-    "image": "https://s-media-cache-ak0.pinimg.com/originals/fe/32/49/fe32495d45283cd6860ae122f0aeaad9.png",
-    "name": "name 4"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/5/5f/Hircine_Bloodmoon.png/revision/latest?cb=20121111214957",
+    "name": "Hircine"
   },
   {
     "id": 5,
-    "image": "https://vignette4.wikia.nocookie.net/vsbattles/images/3/39/Courage-0.png/revision/latest?cb=20160719055423",
-    "name": "name 5"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/5/5a/Jyggalag.png/revision/latest?cb=20130206202311",
+    "name": "Jyggalag"
   },
   {
     "id": 6,
-    "image": "https://vignette1.wikia.nocookie.net/doug/images/3/3b/Doug001.gif/revision/latest?cb=20110807170511",
-    "name": "name 6"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/3/37/Malacath_Statue_Skyrim.png/revision/latest?cb=20151101164706",
+    "name": "Malacath"
   },
   {
     "id": 7,
-    "image": "https://vignette2.wikia.nocookie.net/deathbattlefanon/images/2/2b/Bugs_Bunny.png/revision/latest?cb=20151206010607",
-    "name": "name 7"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/c/c9/Mehrunes_Dagon.jpg/revision/latest?cb=20080501190944",
+    "name": "Mehrunes Dagon"
   },
   {
     "id": 8,
-    "image": "http://vignette3.wikia.nocookie.net/p__/images/9/9a/Johnny_Bravo.png/revision/latest?cb=20131031233339&path-prefix=protagonist",
-    "name": "name 8"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/7/73/Mephala_Spiral_Skein_Statue.png/revision/latest?cb=20150720053306",
+    "name": "Mephala"
   },
   {
     "id": 9,
-    "image": "https://vignette4.wikia.nocookie.net/uncyclopedia/images/e/e4/Tommy_Pickles.png/revision/latest?cb=20110530102641",
-    "name": "name 9"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/7/74/Meridia%27s_Statue.jpg/revision/latest?cb=20120109214853",
+    "name": "Meridia"
   },
   {
     "id": 10,
-    "image": "http://vignette3.wikia.nocookie.net/rockosmodernlife/images/9/9e/Rockos-modern-life-4e582a8f06a41.png/revision/latest?cb=20130522173416",
-    "name": "name 10"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/d/dc/Molag_Bal_Statue_ESO.png/revision/latest?cb=20150926174348",
+    "name": "Molag Ball"
   },
   {
     "id": 11,
-    "image": "http://vignette2.wikia.nocookie.net/dragon-rap-battles/images/b/b6/Captain_Planet.png/revision/latest?cb=20160911200836",
-    "name": "name 11"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/5/58/Nocturnalportrait.png/revision/latest?cb=20120124014711",
+    "name": "Nocturnal"
   },
   {
     "id": 12,
-    "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
-    "name": "name 12"
+    "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/8/8f/Vaermina%27s_Shrine.png/revision/latest?cb=20130517162513",
+    "name": "Vaermina"
   }
 ]

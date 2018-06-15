@@ -60,11 +60,14 @@ class App extends Component {
     return (
       <div>
         <Navbar 
-        message={this.state.message}
+     
         />
         <Header />
+        {this.state.message}
         <Container>
+     
           <Wrapper>
+      
             {this.state.friends.map(friend => (
               <Cards
                 guessFriend={this.guessFriend}
