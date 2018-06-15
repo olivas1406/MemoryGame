@@ -31,7 +31,7 @@ class App extends Component {
   guessFriend = id => {
     // const guessed = this.state.guessed.filter()
     // const friends = this.state.friends.filter(friend => friend.id !== id);
-    const findDog = this.state.guessedFriends.find(guessedFriends => guessedFriends.id === id);
+    const friends = this.state.guessedFriends.find(guessedFriends => guessedFriends.id === id);
 
       if(friends === undefined) {
         this.setState({
@@ -45,7 +45,7 @@ class App extends Component {
         const friendsLeft = this.state.friends.filter(guessedFriends => guessedFriends.id !== id)
           this.setState({
             guessedFriends: friends ,
-            score: this.state.score ++,
+            score: this.state.score +1,
           });
       }
     
@@ -59,7 +59,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar 
+        message={this.state.message}
+        />
         <Header />
         <Container>
           <Wrapper>

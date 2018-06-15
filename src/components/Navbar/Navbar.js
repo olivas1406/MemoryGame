@@ -7,7 +7,7 @@ const Navbar = props => (
             <h3 className="boldText">Clicky Game</h3>
         </div>
         <div className="col-4 navText borderDiv">
-            <h3>Click An Image To Begin</h3>
+        
         </div>
         <div className="col-4 navText">
             <h3>Score: | Top Score: </h3>
