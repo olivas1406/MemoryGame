@@ -13,13 +13,48 @@ import friends from "./friends.json";
 
 class App extends Component {
   state = {
-    friends
+    friends: friends,
+    guessedFriends: friends ,
+    score: 0,
+    topScore: 0,
+    message: "Click to begin"
   };
 
+  shuffleArray = shuffle => {
+    for (let i = shuffle.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [shuffle[i], shuffle[j]] = [shuffle[j], shuffle[i]];
+    }
+}
+
+
   guessFriend = id => {
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-      this.setState({ friends });
+    // const guessed = this.state.guessed.filter()
+    // const friends = this.state.friends.filter(friend => friend.id !== id);
+    const findDog = this.state.guessedFriends.find(guessedFriends => guessedFriends.id === id);
+
+      if(friends === undefined) {
+        this.setState({
+          friends: friends,
+          guessedFriends: friends ,
+          score: 0,
+          topScore: 0,
+          message: "You Lose!"
+        })
+      } else {
+        const friendsLeft = this.state.friends.filter(guessedFriends => guessedFriends.id !== id)
+          this.setState({
+            guessedFriends: friends ,
+            score: this.state.score ++,
+          });
+      }
+    
+    // this.setState({ friends });
+    this.shuffleArray(friends)
   };
+
+
+
 
   render() {
     return (
