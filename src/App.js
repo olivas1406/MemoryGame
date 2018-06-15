@@ -17,7 +17,7 @@ class App extends Component {
     guessedFriends: friends ,
     score: 0,
     topScore: 0,
-    message: "Click to begin"
+    message: "Click a Daedric Prince to begin"
   };
 
   shuffleArray = shuffle => {
