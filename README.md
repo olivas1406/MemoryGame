@@ -17,7 +17,7 @@ Daedric Prince Memory Game
 ![Memory Game Screen Cap](./click.png)
 <br><br>
 <hr>
-This Project was developed and is maintained by Daniel Olivas, to get help contact:<br>
+This Project was developed and is maintained by Daniel Olivas, to get help contact:<br><br>
 
 me@danielolivas.net<br>
 www.danielolivas.net<br>
