@@ -65,8 +65,29 @@ class App extends Component {
       }
   };
 
+  render() {
+    return (
+        <Wrapper>
+            <Header>Daedric Prince Click Game</Header>
+              <h3 className="scoreSummary">
+                {this.state.message}
+              </h3>
+              <h3 className="scoreSummary">
+                Correct Guesses: {this.state.guesses} 
+                <br />
+                Best Score: {this.state.bestScore} 
+              </h3>
+                {this.state.daedra.map(match => (
+                  <Cards
+                    guessedDaedra={this.guessedDaedra}
+                    id={match.id}
+                    key={match.id}
+                    image={match.image}
+                  />
+                ))}
+        </Wrapper>
+    );
+  }
+}
 
-
-
-
-
+export default App;
