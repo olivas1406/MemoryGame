@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Cards from "./components/Cards";
 import Header from "./components/Header"
-import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
@@ -67,65 +66,28 @@ class App extends Component {
 
   render() {
     return (
-      // <div>
-      //   <Navbar />
-      //   {/* <Wrapper> */}
-      //   {/* <Container> */}
-      //       <Header>Daedric Prince Click Game</Header>
-      //         <h3 className="scoreSummary">
-      //           {this.state.message}
-      //         </h3>
-      //         <h3 className="scoreSummary">
-      //           Correct Guesses: {this.state.guesses} 
-      //           <br />
-      //           Best Score: {this.state.bestScore} 
-      //         </h3>
-      //         <Container>
-      //           {this.state.daedra.map(match => (
-      //             <Cards
-      //               guessedDaedra={this.guessedDaedra}
-      //               id={match.id}
-      //               key={match.id}
-      //               image={match.image}
-      //             />
-                
-      //           ))}
-      //           </Container>
-      //           {/* </Container> */}
-      //   {/* </Wrapper> */}
-      //   <Footer />
-      //   </div>
-
-
-
       <div>
-        <Navbar />
-
-            <Header>Daedric Prince Click Game</Header>
-              {/* <h3 className="scoreSummary">
-                {this.state.message}
-              </h3>
-              <h3 className="scoreSummary">
-                Correct Guesses: {this.state.guesses} 
-                <br />
-                Best Score: {this.state.bestScore} 
-              </h3> */}
-              <Container>
-                {this.state.daedra.map(match => (
-                  <Cards
-                    guessedDaedra={this.guessedDaedra}
-                    id={match.id}
-                    key={match.id}
-                    image={match.image}
-                  />
-                
-                ))}
-                </Container>
-
-        <Footer />
-        </div>
-
-
+        <Navbar>
+          <div className="col-6 navText">
+            <h3>{this.state.message}</h3>
+          </div>
+          <div className="col-6 navText">
+            <h3>Score: {this.state.guesses} | Top Score: {this.state.bestScore}</h3>
+          </div>
+        </Navbar>
+        <Header>Daedric Prince Click Game</Header>
+          <Container>
+            {this.state.daedra.map(match => (
+              <Cards
+                guessedDaedra={this.guessedDaedra}
+                id={match.id}
+                key={match.id}
+                image={match.image}
+              />      
+            ))}
+            </Container>
+            <Footer />
+      </div>
     );
   }
 }
