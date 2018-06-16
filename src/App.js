@@ -24,7 +24,7 @@ class App extends Component {
     const daedraMatch = daedra.filter(match => match.id === id);
       if (daedraMatch[0].clicked){
         guesses = 0;
-        message = "You Lose!"
+        message = "You Lose! Click any image to play again!"
 
         for (let i = 0 ; i < daedra.length ; i++){
             daedra[i].clicked = false;
@@ -60,7 +60,6 @@ class App extends Component {
         this.setState({daedraArr});
         this.setState({guesses});
         this.setState({message});
-
       }
   };
 
