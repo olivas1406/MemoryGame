@@ -67,6 +67,7 @@ class App extends Component {
 
   render() {
     return (
+      <div>
         <Wrapper>
             <Header>Daedric Prince Click Game</Header>
               <h3 className="scoreSummary">
@@ -85,7 +86,10 @@ class App extends Component {
                     image={match.image}
                   />
                 ))}
+                
         </Wrapper>
+        <Footer />
+        </div>
     );
   }
 }
