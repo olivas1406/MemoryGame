@@ -67,17 +67,50 @@ class App extends Component {
 
   render() {
     return (
+      // <div>
+      //   <Navbar />
+      //   {/* <Wrapper> */}
+      //   {/* <Container> */}
+      //       <Header>Daedric Prince Click Game</Header>
+      //         <h3 className="scoreSummary">
+      //           {this.state.message}
+      //         </h3>
+      //         <h3 className="scoreSummary">
+      //           Correct Guesses: {this.state.guesses} 
+      //           <br />
+      //           Best Score: {this.state.bestScore} 
+      //         </h3>
+      //         <Container>
+      //           {this.state.daedra.map(match => (
+      //             <Cards
+      //               guessedDaedra={this.guessedDaedra}
+      //               id={match.id}
+      //               key={match.id}
+      //               image={match.image}
+      //             />
+                
+      //           ))}
+      //           </Container>
+      //           {/* </Container> */}
+      //   {/* </Wrapper> */}
+      //   <Footer />
+      //   </div>
+
+
+
       <div>
-        <Wrapper>
+        <Navbar />
+
             <Header>Daedric Prince Click Game</Header>
-              <h3 className="scoreSummary">
+              {/* <h3 className="scoreSummary">
                 {this.state.message}
               </h3>
               <h3 className="scoreSummary">
                 Correct Guesses: {this.state.guesses} 
                 <br />
                 Best Score: {this.state.bestScore} 
-              </h3>
+              </h3> */}
+              <Container>
                 {this.state.daedra.map(match => (
                   <Cards
                     guessedDaedra={this.guessedDaedra}
@@ -85,11 +118,14 @@ class App extends Component {
                     key={match.id}
                     image={match.image}
                   />
-                ))}
                 
-        </Wrapper>
+                ))}
+                </Container>
+
         <Footer />
         </div>
+
+
     );
   }
 }
