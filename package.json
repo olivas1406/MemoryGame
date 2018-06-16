@@ -2,6 +2,7 @@
   "name": "clickeygame",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://olivas1406.github.io/MemoryGame/",
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
