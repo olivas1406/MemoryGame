@@ -14,73 +14,59 @@ let message = "Click on a Daedric Prince to start!"
 
 class App extends Component {
   state = {
-    daedra: daedra,
-    pickedDaedra: daedra ,
-    score: 0,
-    topScore: 0,
-    message: "Click a Daedric Prince to begin"
+    daedra,
+    guesses,
+    bestScore,
+    message
   };
 
-  shuffleArray = shuffle => {
-    for (let i = shuffle.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [shuffle[i], shuffle[j]] = [shuffle[j], shuffle[i]];
-    }
-}
+  guessedDaedra = id => {   
+    const daedraArr = this.state.daedraArr;
+    const daedraMatch = daedra.filter(match => match.id === id);
+      if (daedraMatch[0].clicked){
+        guesses = 0;
+        message = "You Lose!"
 
-  pickedFriends = id => {
-    const findFriend = this.state.pickedFriends.find(id => id.id === id);
-
-    if(findFriend === undefined) {
-      
-        this.setState({ 
-         
-            topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
-            score: 0,
-            friends: friends,
-            pickedFriends: friends
-        });
-    }
-    else {
-   
-        const newFriends = this.state.pickedFriends.filter(id => id.id !== id);
-        
-        this.setState({ 
-       
-            score: this.state.score + 1,
-            friends: friends,
-            pickedFriends: newFriends
-        });
-    }
-
-    this.shuffleArray(friends);
-};
-
-render() {
-    return (
-
-    <div>
-       <Navbar />
-        <Header 
-        
-        />
-        
-        <Container>
-          <Wrapper>
-            {this.state.friends.map(friend => (
-              <Cards
-                pickedFriends={this.pickedFriends}
-                id={friend.id}
-                image={friend.image}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Footer />
-      </div>
-
-          )
+        for (let i = 0 ; i < daedra.length ; i++){
+            daedra[i].clicked = false;
         }
-}
 
-export default App;
+        this.setState({message});
+        this.setState({guesses});
+        this.setState({daedraArr});
+      } else if (guesses < 11) {
+          daedraMatch[0].clicked = true;
+          guesses++;
+          message = "Good Guess!";
+          
+          if (guesses > bestScore){
+            bestScore = guesses;
+            this.setState({ bestScore });
+          }
+          daedra.sort(function(a, b){return 0.5 - Math.random()});
+          this.setState({daedraArr});
+          this.setState({guesses});
+          this.setState({message});
+      } else {
+        daedraMatch[0].clicked = true;
+        guesses = 0;
+        message = "You Win!!! Try Again";
+        bestScore = 12;
+        this.setState({bestScore});
+    
+        for (let i = 0 ; i < daedraArr.length ; i++){
+            daedraArr[i].clicked = false;
+        }
+        daedraArr.sort(function(a, b){return 0.5 - Math.random()});
+        this.setState({daedraArr});
+        this.setState({guesses});
+        this.setState({message});
+
+      }
+  };
+
+
+
+
+
+
