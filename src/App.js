@@ -5,16 +5,17 @@ import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
+import daedra from "./daedra.json";
 import './App.css';
 
-
-import friends from "./friends.json";
-
+let guesses = 0;
+let bestScore = 0;
+let message = "Click on a Daedric Prince to start!"
 
 class App extends Component {
   state = {
-    friends: friends,
-    guessedFriends: friends ,
+    daedra: daedra,
+    pickedDaedra: daedra ,
     score: 0,
     topScore: 0,
     message: "Click a Daedric Prince to begin"
@@ -27,50 +28,48 @@ class App extends Component {
     }
 }
 
+  pickedFriends = id => {
+    const findFriend = this.state.pickedFriends.find(id => id.id === id);
 
-  guessFriend = id => {
-    // const guessed = this.state.guessed.filter()
-    // const friends = this.state.friends.filter(friend => friend.id !== id);
-    const friends = this.state.guessedFriends.find(guessedFriends => guessedFriends.id === id);
-
-      if(friends === undefined) {
-        this.setState({
-          friends: friends,
-          guessedFriends: friends ,
-          score: 0,
-          topScore: 0,
-          message: "You Lose!"
-        })
-      } else {
-        const friendsLeft = this.state.friends.filter(guessedFriends => guessedFriends.id !== id)
-          this.setState({
-            guessedFriends: friends ,
-            score: this.state.score +1,
-          });
-      }
-    
-    // this.setState({ friends });
-    this.shuffleArray(friends)
-  };
-
-
-
-
-  render() {
-    return (
-      <div>
-        <Navbar 
-     
-        />
-        <Header />
-        {this.state.message}
-        <Container>
-     
-          <Wrapper>
+    if(findFriend === undefined) {
       
+        this.setState({ 
+         
+            topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
+            score: 0,
+            friends: friends,
+            pickedFriends: friends
+        });
+    }
+    else {
+   
+        const newFriends = this.state.pickedFriends.filter(id => id.id !== id);
+        
+        this.setState({ 
+       
+            score: this.state.score + 1,
+            friends: friends,
+            pickedFriends: newFriends
+        });
+    }
+
+    this.shuffleArray(friends);
+};
+
+render() {
+    return (
+
+    <div>
+       <Navbar />
+        <Header 
+        
+        />
+        
+        <Container>
+          <Wrapper>
             {this.state.friends.map(friend => (
               <Cards
-                guessFriend={this.guessFriend}
+                pickedFriends={this.pickedFriends}
                 id={friend.id}
                 image={friend.image}
               />
@@ -79,8 +78,9 @@ class App extends Component {
         </Container>
         <Footer />
       </div>
-    );
-  }
+
+          )
+        }
 }
 
 export default App;
