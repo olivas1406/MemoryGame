@@ -8,17 +8,7 @@ Daedric Prince Memory Game
 ### The Daedric Prince is a memorization game, click each image once to score a point, click the same image twice and you lose.  This website was built with HTML, CSS, and ReactJS.
 
 ---
-[CLICK ME to see it in action]
-
-
-
-
-(https://ancient-retreat-52295.herokuapp.com/)
-
-
-
-
-
+[CLICK ME to see it in action](https://salty-woodland-46209.herokuapp.com/)
 <br><br>
 
 ---
